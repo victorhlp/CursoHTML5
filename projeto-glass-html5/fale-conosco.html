@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
     <script language="javascript" src="_javascript/funcoes.js"></script>
     <title>Tudo Sobre o Google Glass</title>
     <script>
-        function calc_total() {
-            var quant = parseInt.(document.getElementById('cQuant').value);
+        function calc_total(){
+            var quant = paeseInt(document.getElementById('cQuant').value);
             tot = quant * 1500;
             document.getElementById('cTot').value = tot;
         }
@@ -52,7 +53,8 @@
         </article>
 
 
-        <form method="post" id="fContato" action="mailto:victor.tjp1900@gmail.com" oninput="calc_total();">
+            <form method="post" id="fContato" action="mailto:victor.tjp1900@gmail.com" oninput="calc_total();">
+           
             <fieldset id="usuario">
                 <legend>Identificação do Usuário</legend>
                 <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="30" maxlength="35" placeholder="Nome Completo" /></p>
@@ -114,7 +116,7 @@
                 <p><label for="cUrg">Grau de Urgência:</label>
                     Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="5">Max</p>
                 <p><label for="cMsg">Mensagem:</label>
-                    <textarea type="text" name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem..."></textarea>
+                    <textarea type="text" name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem..."></textarea>
                 </p>
             </fieldset>
 
@@ -131,10 +133,12 @@
                     <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly>
                 </p>
             </fieldset>
+            
+            <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
         </form>
 
 
-        <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+        
 
         <footer id="rodape">
             <p>Copyright 2013 - by Gustavo Guanabara<br>
